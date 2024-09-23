@@ -30,6 +30,11 @@
 
             var coloroftheday = MyIFClass.MySWITCHMethod(null);
             Console.WriteLine($"Cvet nastroeniya " + coloroftheday);
+
+            for (var i = 0; i < 20; i += 2)
+            {
+                Console.WriteLine(i + "*" + i + "=" + (i*i));
+            }
         }
 
         public static int StaticSum(int a, int b)
