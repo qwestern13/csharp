@@ -1,5 +1,7 @@
 ﻿namespace myfirstapp
 {
+
+    // class and methods
     internal class Program
     {
         static void Main(string[] args)
@@ -22,6 +24,12 @@
 
             var factorial = Fact(5);
             Console.WriteLine("factorial = " + factorial);
+
+            var weather = MyIFClass.MyIFMethod(null);
+            Console.WriteLine("Weather: " + weather);
+
+            var coloroftheday = MyIFClass.MySWITCHMethod(null);
+            Console.WriteLine($"Cvet nastroeniya " + coloroftheday);
         }
 
         public static int StaticSum(int a, int b)
@@ -71,6 +79,29 @@
             return sum;
         }
 
+    }
+
+    // if
+
+    public class MyIFClass : MyIFClassBase
+    {
+
+        public static string MyIFMethod(string[]? args)
+        {
+            var temperature = 20;
+
+            Console.WriteLine($"This is temp: {temperature}");
+
+            if (temperature == 20)
+            {
+                return $"If temperature == {temperature} this is horosho!";
+            }
+            else
+            {
+                return "Not horosho!";
+            }
+
+        }
     }
 
 }
