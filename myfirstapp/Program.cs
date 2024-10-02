@@ -35,6 +35,26 @@
             {
                 Console.WriteLine(i + "*" + i + "=" + (i*i));
             }
+
+            //for (var j = 0; j < 20; j++)
+            //{
+            //    if (j == 15)
+            //    {
+            //        Console.WriteLine("THIS IS 15... and continue!");
+            //        continue;
+            //    }
+            //    Console.WriteLine(j + "*" + j + "=" + (j * j));
+            //}
+
+            for (var j = 0; j < 20; j++)
+            {
+                if (j == 15)
+                {
+                    Console.WriteLine("THIS IS 15... and break!");
+                    break;
+                }
+                Console.WriteLine(j + "*" + j + "=" + (j * j));
+            }
         }
 
         public static int StaticSum(int a, int b)
