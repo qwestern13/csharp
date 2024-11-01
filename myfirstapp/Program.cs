@@ -23,6 +23,6 @@
 
     public class MyFirstClass
     {
-        public static void 
+        public static void OopsMethod(){}
     }
 }
