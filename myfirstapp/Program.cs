@@ -2,27 +2,33 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-
-            Console.WriteLine("Hello, C#!");
-
-            var sum1 = StaticSum(6, 7);
-            Console.WriteLine("sum1 = " + sum1);
-
+          // Console.WriteLine("Hello World!");
+          WriteTable(6, "text");
+          /*
+          int inputNumber = int.Parse(Console.ReadLine());
+          string? inputString = Console.ReadLine();
+          
+          WriteTable(inputNumber, inputString);
+          */
+          
         }
 
-        public static int StaticSum(int a, int b)
+        private static void WriteTable(int n, string s)
         {
+            if (n is < 1 or > 6)
+            {
+                Console.WriteLine("Enter the correct number:");
+            }
 
-            var sum = a + b;
-
-            return sum;
+            int weight = s.Length + 2 * (n - 1);
+            for (int i = 1; i <= weight; i++)
+            {
+                Console.Write('+');
+            }
         }
+
     }
 
-    public class MyFirstClass
-    {
-        public static void OopsMethod(){}
-    }
-}
+}    
