@@ -31,11 +31,12 @@
             int weight = s.Length + 2 * (n - 1);
             int heightCenter = (int)Math.Floor((double)((2 * n - 1) / 2));
             
-            for (int i = 1; i <= weight; i++)
+            /*for (int i = 1; i <= weight; i++)
             {
                 Console.Write('+');
             }
-            Console.WriteLine();
+            Console.WriteLine();*/
+            CrossLine(weight);
             
             for (int i = 1; i < 2 * n - 1; i++)
             {
@@ -60,10 +61,21 @@
                     }
                 }
                 Console.Write('+');
-                Console.WriteLine();
+                Console.Write('\n');
             }
+            CrossLine(weight);
+        }
+        
+        private static void CrossLine(int weight)
+        {
+            for (int i = 1; i <= weight; i++)
+            {
+                Console.Write('+');
+            }
+            Console.WriteLine();
+            
         }
 
     }
 
-}    
+}
