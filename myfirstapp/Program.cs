@@ -28,15 +28,15 @@
                 return;
             }
 
-            int weight = s.Length + 2 * (n - 1);
+            int widght = s.Length + 2 * (n - 1);
             int heightCenter = (int)Math.Floor((double)((2 * n - 1) / 2));
             
-            /*for (int i = 1; i <= weight; i++)
+            /*for (int i = 1; i <= widght; i++)
             {
                 Console.Write('+');
             }
             Console.WriteLine();*/
-            CrossLine(weight);
+            CrossLine(widght);
             
             for (int i = 1; i < 2 * n - 1; i++)
             {
@@ -55,7 +55,7 @@
                 }
                 else
                 {
-                    for (int j = 1; j <= weight - 2; j++)
+                    for (int j = 1; j <= widght - 2; j++)
                     {
                         Console.Write(' ');
                     }
@@ -63,12 +63,12 @@
                 Console.Write('+');
                 Console.Write('\n');
             }
-            CrossLine(weight);
+            CrossLine(widght);
         }
         
-        private static void CrossLine(int weight)
+        private static void CrossLine(int widght)
         {
-            for (int i = 1; i <= weight; i++)
+            for (int i = 1; i <= widght; i++)
             {
                 Console.Write('+');
             }
