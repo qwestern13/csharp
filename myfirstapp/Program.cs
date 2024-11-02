@@ -5,10 +5,11 @@
         public static void Main(string[] args)
         {
           WriteTable(3, "testtt");
+
           /*
           int inputNumber = int.Parse(Console.ReadLine());
           string? inputString = Console.ReadLine();
-          
+
           WriteTable(inputNumber, inputString);
           */
         }
@@ -28,18 +29,13 @@
             }
 
             int wight = s.Length + 2 * (n - 1);
-            //int heightCenter = (int)Math.Floor((double)((2 * n - 1) / 2));
-            //Console.WriteLine(heightCenter);
+            int height = 2 * n - 1;
+
             if (wight > 40)
             {
                 return;
             }
 
-            /*for (int i = 1; i <= wight; i++)
-            {
-                Console.Write('+');
-            }
-            Console.WriteLine();*/
             CrossLine(wight);
             
             for (int i = 1; i <= 2 * n - 1; i++)
@@ -68,6 +64,7 @@
                 Console.Write('\n');
             }
             CrossLine(wight);
+            ChessDeck(wight, height);
         }
         
         private static void CrossLine(int wight)
@@ -80,10 +77,46 @@
             
         }
 
-        /*public static void ChessDeck(int wight, int height)
+        public static void ChessDeck(int wight, int height)
         {
-            while
-        }*/
+            string crosses = "";
+            int i = 0;
+            bool isCross = false;
+            for (int j = 1; j <= height; j++)
+            {
+                while (i < wight)
+                {
+                    if (isCross && j % 2 == 0)
+                    {
+                        crosses += "+";
+                        isCross = false;
+                    }
+                    else if (!isCross && j % 2 == 0)
+                    {
+                        crosses += " ";
+                        isCross = true;
+                    }
+                    else if (!isCross && j % 2 != 0)
+                    {
+                        crosses += " ";
+                        isCross = true;
+                    }
+                    else if (!isCross && j % 2 != 0)
+                    {
+                        crosses += " ";
+                        isCross = true;
+                    }
+                    i++;
+                }
+            }
+
+            Console.Write("+");
+            Console.Write(crosses);
+            Console.Write("+");
+
+        }
+        
+        
 
     }
 
