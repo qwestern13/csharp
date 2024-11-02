@@ -30,7 +30,12 @@
 
             int weight = s.Length + 2 * (n - 1);
             int heightCenter = (int)Math.Floor((double)((2 * n - 1) / 2));
-            
+
+            if (weight > 40)
+            {
+                return;
+            }
+
             /*for (int i = 1; i <= weight; i++)
             {
                 Console.Write('+');
