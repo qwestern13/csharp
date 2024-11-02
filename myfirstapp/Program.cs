@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-          WriteTable(3, "testtt");
+          WriteTable(6, "testtt");
 
           /*
           int inputNumber = int.Parse(Console.ReadLine());
@@ -82,37 +82,44 @@
             string crosses = "";
             int i = 0;
             bool isCross = false;
-            for (int j = 1; j <= height; j++)
+            for (int j = 0; j < height; j++)
             {
-                while (i < wight)
+                Console.Write("+");
+                for (int k = 1; k <= wight; k++)
                 {
-                    if (isCross && j % 2 == 0)
+                    if (j % 2 == 0)
                     {
-                        crosses += "+";
-                        isCross = false;
+                        if (isCross)
+                        {
+                            Console.Write('+');
+                            isCross = false;
+                        }
+                        else
+                        {
+                            Console.Write(' ');
+                            isCross = true;
+                        }
                     }
-                    else if (!isCross && j % 2 == 0)
+                    else
                     {
-                        crosses += " ";
-                        isCross = true;
+                        if (!isCross)
+                        {
+                            Console.Write('+');
+                            isCross = true;
+                        }
+                        else
+                        {
+                            Console.Write(' ');
+                            isCross = false;
+                        }
                     }
-                    else if (!isCross && j % 2 != 0)
-                    {
-                        crosses += " ";
-                        isCross = true;
-                    }
-                    else if (!isCross && j % 2 != 0)
-                    {
-                        crosses += " ";
-                        isCross = true;
-                    }
+
                     i++;
                 }
+                
+                Console.Write("+");
+                Console.WriteLine();
             }
-
-            Console.Write("+");
-            Console.Write(crosses);
-            Console.Write("+");
 
         }
         
