@@ -65,6 +65,9 @@
             }
             CrossLine(wight);
             ChessDeck(wight, height);
+            CrossLine(wight);
+            BigCross(wight);
+            CrossLine(wight);
         }
         
         private static void CrossLine(int wight)
@@ -121,8 +124,33 @@
             }
 
         }
-        
-        
+
+        public static void BigCross(int wight)
+        {
+            for (int i = 0; i < wight; i++)
+            {
+                Console.Write("+");
+                for (int j = 0; j < wight; j++)
+                {
+                    if (j == i)
+                    {
+                        Console.Write('+');
+                    }
+                    else if (j == wight - i - 1)
+                    {
+                        Console.Write('+');
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+                }
+                Console.Write("+");
+                Console.WriteLine();
+            }
+        }
+
+
 
     }
 
