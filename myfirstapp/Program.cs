@@ -113,7 +113,6 @@
                             isCross = false;
                         }
                     }
-
                     i++;
                 }
                 
